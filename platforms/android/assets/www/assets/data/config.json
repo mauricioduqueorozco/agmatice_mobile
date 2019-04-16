@@ -1,0 +1,16 @@
+{
+  "config_APP" : {
+    "mode" : true,
+    "nfc" : false,
+    "qr" : false,
+    "gps" : false
+  },
+  "urls" : {
+    "company" : "http://app.agmatice.com",
+    "sendData" : "http://192.168.100.20:8000/monitoring/test",
+    "loginCompany" : "http://app.agmatice.com/?company_key="
+  },
+  "passwords" : {
+    "root" : 123
+  }
+}

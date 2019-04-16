@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar hideBackButton *navbar>
+    <ion-title>
+      Autenticación
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #loginForm="ngForm" novalidate>
+    <ion-list no-lines>
+
+      <ion-item>
+        <ion-label stacked color="primary">Contraseña</ion-label>
+        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+        Se requiere la contraseña
+      </p>
+    </ion-list>
+
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="onLogin(loginForm)" type="submit" block>Iniciar sesión</button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

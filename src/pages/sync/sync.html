@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+    Información pendiente de enviar
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label>{{history}}</ion-label>
+  <button  ion-button full [disabled]="!sync" (click)="sincronizarData()" >Sincronización</button>
+</ion-content>

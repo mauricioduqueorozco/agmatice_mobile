@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Configuraciones
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item>
+      <ion-label>Producción</ion-label>
+      <ion-toggle [(ngModel)]="config.mode" #mode="ngModel" name="mode"  (ionChange)="setSetting(config)"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>NFC</ion-label>
+      <ion-toggle [(ngModel)]="config.nfc" #nfc="ngModel" name="nfc"  (ionChange)="setSetting(config)"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>QR</ion-label>
+      <ion-toggle [(ngModel)]="config.qr" #qr="ngModel" name="qr"  (ionChange)="setSetting(config)"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>GPS</ion-label>
+      <ion-toggle [(ngModel)]="config.gps" #gps="ngModel" name="gps"  (ionChange)="setSetting(config)"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <button  ion-button full (click)="eraseData()">Reset</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Configuración inicial
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #loginForm="ngForm" novalidate>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label stacked color="primary">Empresa</ion-label>
+        <ion-input [(ngModel)]="login.company" name="company" type="text" #company="ngModel" spellcheck="false" autocapitalize="off" required></ion-input>
+      </ion-item>
+      <p ion-text [hidden]="company.valid || submitted == false" color="danger" padding-left>
+        Se requiere la empresa
+      </p>
+
+    </ion-list>
+
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button full (click)="requestCompany(loginForm)" type="submit" block>Configurar</button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

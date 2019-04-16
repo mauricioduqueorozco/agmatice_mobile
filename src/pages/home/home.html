@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Agmatice Control
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    Nombre operador: {{profile.name}}
+  </p>
+  <p>
+    Identificación: {{profile.cedula}}
+  </p>
+  <p>
+    Perfil: {{profile.role}}
+  </p>
+
+  <p>
+  </p>
+  <ion-list>
+    <ion-list-header>
+      Navegación
+    </ion-list-header>
+    <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)" [disabled]="!p.enable">
+      <ion-icon item-start [name]="p.icon"></ion-icon>
+      {{p.title}}
+    </button>
+  </ion-list>
+
+  <p>
+  </p>
+  <button  ion-button full (click)="endWork()">Finalizar trabajo</button>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Labor
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    Usuario {{user.name}}
+    <ion-list>
+     <!-- <ion-item *ngFor="let item of appButton">
+        <ion-label class="custom-agmatice">{{item}}</ion-label>
+        <ion-checkbox [(ngModel)]="item.checked" (click)="selectedData(item)"></ion-checkbox>
+		 </ion-item> -->
+			<ion-list-header>Elegir una opción</ion-list-header>
+			<button class="custom-agmatice-button" ion-button full *ngFor="let item of appButton; let i = index" data-index="i"  (click)="selectedData(item)">
+				<ion-label class="custom-agmatice">{{ i + 1 }}. {{ item }}</ion-label>
+			</button>
+    </ion-list>
+
+    <p></p>
+    <!-- <button ion-button (click)="scannerData()" block>Enviar</button> -->
+
+</ion-content>

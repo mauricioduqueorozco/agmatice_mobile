@@ -1,0 +1,30 @@
+{
+  "users" : [
+    {
+        "name" : "Pepe",
+        "cedula" : 123,
+        "role" : "Polinizacion"
+    },
+    {
+        "name" : "Juan",
+        "cedula" : 321,
+        "role" : "Fertilizacion"
+    },
+    {
+      "name" : "admin",
+      "cedula" : 111
+    }
+  ],
+  "process" : {
+    "Fertilizacion" : [
+      "Completamente Fertilizado",
+      "Campo 2"
+    ],
+    "Polinizacion" : [
+      "No hay flor",
+      "Boton",
+      "Campo 3"
+    ]
+  },
+  "company" : "agmatice"
+}

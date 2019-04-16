@@ -1,0 +1,8 @@
+{
+  "name": "Agamtice_dev",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
